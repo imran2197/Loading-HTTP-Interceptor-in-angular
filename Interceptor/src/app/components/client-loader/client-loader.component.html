@@ -1,3 +1,10 @@
-<div *ngIf="loader$ | async">
-    <h1>Loading...</h1>
+<div class="backdrop" *ngIf="loader$ | async">
+    <div class="loading-spinner">
+        <div class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
 </div>
