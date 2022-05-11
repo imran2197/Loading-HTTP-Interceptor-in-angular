@@ -6,15 +6,21 @@ import { AppComponent } from './app.component';
 import { ClientLoaderComponent } from './components/client-loader/client-loader.component';
 import { HttpInterceptorService } from './interceptors/http.interceptor';
 import { LoadingInterceptor } from './interceptors/loading.interceptor';
+import { AppRoutingModule } from './app-routing.module';
+import { UsersComponent } from './components/users/users.component';
+import { PostsComponent } from './components/posts/posts.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ClientLoaderComponent
+    ClientLoaderComponent,
+    UsersComponent,
+    PostsComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [
     {

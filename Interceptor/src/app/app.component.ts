@@ -8,22 +8,8 @@ import { UsersService } from './services/users.service';
 })
 export class AppComponent {
   title = 'Interceptor';
-  constructor(private userService: UsersService){}
+  constructor(){}
 
-  ngOnInit(){
-    this.getPosts();
-    // this.getUsers();
-  }
-
-  getPosts(){
-    this.userService.getPosts().subscribe((res: any) => {
-      console.log(res);
-    })
-  }
+  ngOnInit(){}
   
-  getUsers(){
-    this.userService.getUsers().subscribe((res: any) => {
-      console.log(res);
-    })
-  }
 }

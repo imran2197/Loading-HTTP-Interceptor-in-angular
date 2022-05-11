@@ -14,6 +14,7 @@ export class HttpInterceptorService implements HttpInterceptor {
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
     console.log("HTTP Interceptor Works", request);
+    return next.handle(request);
     if(request.url.startsWith('assets') || request.url.includes('logout')){
       return next.handle(request);
     }else {
